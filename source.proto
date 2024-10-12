@@ -1,0 +1,10 @@
+syntax="proto3";
+
+message Source {
+    oneof source_type {
+        string ytb_video_id = 1;
+        string ytb_channel = 2;
+        string ytb_playlist = 3;
+    }
+}
+

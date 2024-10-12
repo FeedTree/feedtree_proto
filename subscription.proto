@@ -1,0 +1,26 @@
+syntax="proto3";
+
+import "condition.proto";
+import "source.proto";
+
+message Subscription {
+    oneof subscription_type {
+        SubscriptionNot node_not = 1;
+        SubscriptionAnd node_and = 2;
+        SubscriptionOr node_or = 3;
+        Condition condition = 4;
+        Source source = 5;
+    }
+}
+
+message SubscriptionAnd { 
+    repeated Subscription subscription_and = 1;
+}
+
+message SubscriptionOr {
+    repeated Subscription subscription_or = 1;
+}
+
+message SubscriptionNot { 
+    Subscription subscription_not = 1;
+}

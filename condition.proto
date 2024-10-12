@@ -1,0 +1,12 @@
+syntax="proto3";
+
+import "google/protobuf/duration.proto";
+
+message Condition {
+    oneof condition_type {
+        google.protobuf.Duration published_within = 1;
+        bool is_live = 2;
+        google.protobuf.Duration duration_within = 3;
+        int32 first_n = 4;
+    }
+}
