@@ -3,10 +3,7 @@ syntax="proto3";
 package feedtree.proto;
 
 message Source {
-    oneof source_type {
-        string ytb_video_id = 1;
-        string ytb_channel = 2;
-        string ytb_playlist = 3;
-    }
+    string id = 1;
+    string url = 2;
 }
 
