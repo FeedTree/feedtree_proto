@@ -6,6 +6,7 @@ import "condition.proto";
 import "source.proto";
 
 message Subscription {
+    string id = 6; 
     oneof subscription_type {
         SubscriptionNot node_not = 1;
         SubscriptionAnd node_and = 2;
