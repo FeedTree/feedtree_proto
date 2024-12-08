@@ -1,5 +1,7 @@
 syntax="proto3";
 
+package feedtree.proto;
+
 message Source {
     oneof source_type {
         string ytb_video_id = 1;

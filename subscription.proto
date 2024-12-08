@@ -1,5 +1,7 @@
 syntax="proto3";
 
+package feedtree.proto;
+
 import "condition.proto";
 import "source.proto";
 
